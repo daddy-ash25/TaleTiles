@@ -9,54 +9,42 @@
     grid-template-rows: 6vh 94vh;
 }
 
-.main-body{
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
-.game-area{
-    background-color: #dff047;
-    height: 100%;
-    width: 70%;
-}
-
-.progres-hints{
-    background-color: #39e73c;
-    height: 100%;
-    width: 30%;
-}
 
 @media (max-width: 1024px){
-    .main-body{
+    .container .game-body{
         grid-row: 2/3;
         grid-column: 1/3;
     }
+
+    .container .sidebar{
+        display: none;
+    }
+
 }
 
 @media (max-width: 728px){
-    .main-body{
+    .container .game-body{
         grid-row: 2/3;
         grid-column: 1/3;
-    }
-
-    .main-body{
         flex-direction: column;
     }
     
-    .game-area{
+    .game-body .game-area{
         height: 70%;
         width: 100%;
     }
 
-    .progres-hints{
+    .game-body .progres-hints{
         height: 30%;
         width: 100%;
     }
+
+    
 }
 
 
 @media (max-width: 480px){
-    .main-body{
+    .container .game-body{
         grid-row: 2/3;
         grid-column: 1/3;
     }
@@ -75,18 +63,14 @@ body{
     grid-column: 1/3;
     z-index: 1;
 }
-.main-body{
+.game-body{
+    
+    grid-row: 2/3;
+    grid-column: 2/3;
     /* color: white; */
     background-color: white;
     height: 100%;
     display: flex;
-}
-
-.side-bar{
-    background-color: pink;
-    grid-row: 2/3;
-    grid-column: 1/2;
-    height: 100%;
 }
 
 .right{
@@ -108,6 +92,7 @@ body{
     border-width: 0px;
     background-color: #47a1f0;
     /* margin: 20%; */
+    /* display: none; */
 }
 
 .button-container{
@@ -129,4 +114,39 @@ body{
     /* size: 100%; */
     /* color:; */
     object-fit: cover;
+}
+
+.game-container{
+    width: 80%;
+    height: 80%;
+    background: #000;
+}
+
+
+
+.game-area{
+    background-color: #dff047;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.progres-hints{
+    background-color: #39e73c;
+    height: 100%;
+    width: 30%;
+}
+
+
+
+
+.sidebar{
+    background-color: pink;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    height: 100%;
 }
